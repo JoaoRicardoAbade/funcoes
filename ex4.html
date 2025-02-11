@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Entrada</title>
+    <script>
+        function verificarEntrada() {
+            let idade = parseInt(prompt("Digite sua idade:"));
+            let cidade = prompt("Digite sua cidade:").toLowerCase();
+            let mesNascimento = parseInt(prompt("Digite o número do seu mês de nascimento:"));
+
+            if (idade >= 18 && cidade === "campinas" && [2, 4, 6, 8, 9].includes(mesNascimento)) {
+                document.getElementById("resultado").textContent = "Entrada Permitida! Bem-vindo à balada.";
+            } else {
+                document.getElementById("resultado").textContent = "Entrada Negada! Você não atende aos critérios.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Verificação de Entrada para a Balada no Cambuí</h1>
+    <button onclick="verificarEntrada()">Verificar Entrada</button>
+    <p id="resultado"></p>
+</body>
+</html>

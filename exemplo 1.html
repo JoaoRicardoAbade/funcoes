@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Atual</title>
+</head>
+<body>
+<p id="mes"></p>
+<br>
+<button onclick="mostrarMes()">Clique</button>
+</body>
+<script src="js/dataAtual.js">
+
+    // 1- Crie uma funcao que mostre do mes 
+
+    function mostrarMes() {
+        let meses = [
+            'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+            'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+        ];
+
+        let data = new Date();
+
+        let mesAtual = meses[data.getMonth()];
+        //  nome do mes na tela
+        document.getElementById("mes").textContent = 'Mes Atual = ' + mesAtual;
+    }
+    
+</script>
+</html>

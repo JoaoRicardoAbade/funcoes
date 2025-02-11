@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da Semana</title>
+    <script>
+        function nomeDiaSemana() {
+            const dias = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+            const hoje = new Date().getDay();
+            document.getElementById("diaSemana").textContent = "Hoje é " + dias[hoje];
+        }
+    </script>
+</head>
+<body onload="nomeDiaSemana()">
+    <h1 id="diaSemana"></h1>
+</body>
+</html>
